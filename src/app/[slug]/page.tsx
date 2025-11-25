@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getReviewBySlug, getAllSlugs, getRelatedReviews } from "@/lib/mdx";
+import { db } from "@/lib/db";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -10,57 +10,11 @@ import { Calendar, Clock, User } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import type { Metadata } from "next";
-
-export async function generateStaticParams() {
-    // Retornar array estático para evitar problemas com filesystem no dev server
-    return [
-        { slug: 'melhor-notebook-2025' }
-    ];
-}
-
-export async function generateMetadata({
-    params,
-}: {
-    params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-    const { slug } = await params;
-    const review = getReviewBySlug(slug);
-
-    if (!review) {
-        return {
-            title: "Review não encontrado",
-        };
-    }
-
-    return {
-        title: review.metaTitle || review.title,
-        description: review.metaDescription || review.excerpt,
-        keywords: review.keywords,
-        authors: [{ name: review.author || "Equipe MelhorCompra" }],
-        openGraph: {
-            title: review.metaTitle || review.title,
-            description: review.metaDescription || review.excerpt,
-            type: "article",
-            publishedTime: review.publishedAt,
-            modifiedTime: review.updatedAt,
-            authors: [review.author || "Equipe MelhorCompra"],
-            images: review.mainImage ? [review.mainImage] : [],
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: review.metaTitle || review.title,
-            description: review.metaDescription || review.excerpt,
-            images: review.mainImage ? [review.mainImage] : [],
-        },
-    };
-}
-
 import { ProsCons } from "@/components/reviews/ProsCons";
 import { ProductSpecs } from "@/components/reviews/ProductSpecs";
 import { ReviewScore } from "@/components/reviews/ReviewScore";
 import { ComparisonTable } from "@/components/reviews/ComparisonTable";
 import { Button } from "@/components/ui/button";
-import { StructuredData } from "@/components/seo/StructuredData";
 
 const components = {
     ProsCons,
@@ -77,20 +31,96 @@ const components = {
     Button,
 };
 
-export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateStaticParams() {
+    const reviews = await db.review.findMany({
+        where: { published: true },
+        select: { slug: true },
+    });
+
+    return reviews.map((review) => ({
+        slug: review.slug,
+    }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
     const { slug } = await params;
-    const review = getReviewBySlug(slug);
+    const review = await db.review.findUnique({
+        where: { slug },
+    });
 
     if (!review) {
+        return {
+            title: "Review não encontrado",
+        };
+    }
+
+    return {
+        title: review.metaTitle || review.title,
+        description: review.metaDescription || review.excerpt,
+        keywords: review.keywords,
+        authors: [{ name: review.author?.name || "Equipe MelhorCompra" }],
+        openGraph: {
+            title: review.metaTitle || review.title,
+            description: review.metaDescription || review.excerpt,
+            type: "article",
+            publishedTime: review.publishedAt?.toISOString(),
+            modifiedTime: review.updatedAt.toISOString(),
+            authors: [review.author?.name || "Equipe MelhorCompra"],
+            images: review.mainImage ? [review.mainImage] : [],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: review.metaTitle || review.title,
+            description: review.metaDescription || review.excerpt,
+            images: review.mainImage ? [review.mainImage] : [],
+        },
+    };
+}
+
+export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const review = await db.review.findUnique({
+        where: { slug },
+        include: {
+            author: true,
+            category: true,
+            products: {
+                include: {
+                    affiliateLinks: true,
+                },
+            },
+        },
+    });
+
+    if (!review || !review.published) {
         notFound();
     }
 
-    const relatedReviews = getRelatedReviews(review.slug, review.category, 3);
+    const relatedReviews = await db.review.findMany({
+        where: {
+            categoryId: review.categoryId,
+            published: true,
+            NOT: {
+                id: review.id,
+            },
+        },
+        take: 3,
+        include: {
+            category: true,
+        },
+    });
+
+    // Calculate reading time (rough estimate: 200 words per minute)
+    const wordCount = review.content.split(/\s+/).length;
+    const readingTime = `${Math.ceil(wordCount / 200)} min de leitura`;
 
     return (
         <>
             <Header />
-            <StructuredData type="Article" data={review} />
             <main>
                 {/* Breadcrumbs */}
                 <div className="border-b border-neutral-200 bg-neutral-50 py-4">
@@ -101,10 +131,10 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                             </Link>
                             <span>/</span>
                             <Link
-                                href={`/categorias/${review.category.toLowerCase()}`}
+                                href={`/categorias/${review.category.slug}`}
                                 className="hover:text-primary-600"
                             >
-                                {review.category}
+                                {review.category.name}
                             </Link>
                             <span>/</span>
                             <span className="text-neutral-900">{review.title}</span>
@@ -116,7 +146,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <article className="py-12">
                     <div className="container max-w-4xl">
                         <div className="mb-8">
-                            <Badge className="mb-4">{review.category}</Badge>
+                            <Badge className="mb-4">{review.category.name}</Badge>
                             <h1 className="mb-4 font-display text-4xl font-bold leading-tight md:text-5xl">
                                 {review.title}
                             </h1>
@@ -126,21 +156,21 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                             <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-600">
                                 <div className="flex items-center gap-2">
                                     <User className="h-4 w-4" />
-                                    <span>{review.author || "Equipe MelhorCompra"}</span>
+                                    <span>{review.author.name || "Equipe MelhorCompra"}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Calendar className="h-4 w-4" />
-                                    <span>Publicado em {formatDate(review.publishedAt)}</span>
+                                    <span>Publicado em {formatDate(review.publishedAt?.toISOString() || review.createdAt.toISOString())}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Clock className="h-4 w-4" />
-                                    <span>{review.readingTime}</span>
+                                    <span>{readingTime}</span>
                                 </div>
                             </div>
 
-                            {review.updatedAt && review.updatedAt !== review.publishedAt && (
+                            {review.updatedAt && review.updatedAt.getTime() !== review.createdAt.getTime() && (
                                 <p className="mt-2 text-sm text-neutral-500">
-                                    Atualizado em {formatDate(review.updatedAt)}
+                                    Atualizado em {formatDate(review.updatedAt.toISOString())}
                                 </p>
                             )}
                         </div>
@@ -183,7 +213,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                                         <Card className="h-full transition-all hover:shadow-lg">
                                             <CardHeader>
                                                 <Badge variant="secondary" className="mb-2 w-fit">
-                                                    {related.category}
+                                                    {related.category.name}
                                                 </Badge>
                                                 <CardTitle className="line-clamp-2 text-lg group-hover:text-primary-600 transition-colors">
                                                     {related.title}

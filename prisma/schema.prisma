@@ -13,22 +13,80 @@ datasource db {
   url = env("DATABASE_URL")
 }
 
-model Post {
-  id        String     @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  authorId  String?
-  author    User?      @relation(fields: [authorId], references: [id])
-}
-
 model User {
-  id        String     @id @default(cuid())
+  id        String   @id @default(cuid())
   name      String?
-  email     String?    @unique
-  createdAt DateTime   @default(now()) @map(name: "created_at")
-  updatedAt DateTime   @updatedAt @map(name: "updated_at")
-  posts     Post[]
+  email     String   @unique
+  password  String
+  role      String   @default("user") // "admin" or "user"
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @updatedAt @map(name: "updated_at")
+  reviews   Review[]
 
   @@map(name: "users")
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  reviews     Review[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Review {
+  id              String    @id @default(cuid())
+  title           String
+  slug            String    @unique
+  excerpt         String
+  content         String    @db.Text
+  published       Boolean   @default(false)
+  featured        Boolean   @default(false)
+  metaTitle       String?
+  metaDescription String?
+  keywords        String[]
+  mainImage       String?
+  authorId        String
+  author          User      @relation(fields: [authorId], references: [id])
+  categoryId      String
+  category        Category  @relation(fields: [categoryId], references: [id])
+  products        Product[]
+  publishedAt     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([slug])
+  @@index([categoryId])
+}
+
+model Product {
+  id             String          @id @default(cuid())
+  name           String
+  description    String?         @db.Text
+  image          String?
+  brand          String?
+  rating         Float?
+  reviewId       String
+  review         Review          @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  affiliateLinks AffiliateLink[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  @@index([reviewId])
+}
+
+model AffiliateLink {
+  id        String   @id @default(cuid())
+  store     String
+  url       String
+  price     Float
+  inStock   Boolean  @default(true)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([productId])
 }
