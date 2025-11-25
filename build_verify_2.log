@@ -1,0 +1,154 @@
+﻿
+> melhorcompra@0.1.0 build
+> next build
+
+node.exe :  ÔÜá 
+`eslint` 
+configuration in 
+next.config.ts is no 
+longer supported. 
+See more info here: h
+ttps://nextjs.org/doc
+s/app/api-reference/c
+li/next#next-lint-opt
+ions
+No C:\Program Files\n
+odejs\npm.ps1:29 
+caractere:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ( ÔÜá `e   
+ slint` c...xt-li    
+nt-options:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+ ÔÜá Invalid 
+next.config.ts 
+options detected: 
+ ÔÜá     
+Unrecognized key(s) 
+in object: 'eslint'
+ ÔÜá See more info 
+here: https://nextjs.
+org/docs/messages/inv
+alid-next-config
+   Ôû▓ Next.js 16.0.4 (Turbopack)
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 2.4s
+   Skipping validation of types
+   Collecting page data using 11 workers ...
+   Generating static pages using 11 workers (0/5) ...
+Error occurred 
+prerendering page 
+"/". Read more: https
+://nextjs.org/docs/me
+ssages/prerender-erro
+r
+YAMLException: end 
+of the stream or a 
+document separator 
+is expected at line 
+12, column 1:
+    - Boa 
+refrigera├º├úo
+    ^
+    at K (C:\Users\lu
+cas.bevilacqua\Deskto
+p\melhorcompra\melhor
+compra\.next\server\c
+hunks\ssr\[root-of-th
+e-server]__aa3badbd._
+.js:1:156353)
+    at L (C:\Users\lu
+cas.bevilacqua\Deskto
+p\melhorcompra\melhor
+compra\.next\server\c
+hunks\ssr\[root-of-th
+e-server]__aa3badbd._
+.js:1:156451)
+    at ae (C:\Users\l
+ucas.bevilacqua\Deskt
+op\melhorcompra\melho
+rcompra\.next\server\
+chunks\ssr\[root-of-t
+he-server]__aa3badbd.
+_.js:1:170294)
+    at af (C:\Users\l
+ucas.bevilacqua\Deskt
+op\melhorcompra\melho
+rcompra\.next\server\
+chunks\ssr\[root-of-t
+he-server]__aa3badbd.
+_.js:1:170732)
+    at ah (C:\Users\l
+ucas.bevilacqua\Deskt
+op\melhorcompra\melho
+rcompra\.next\server\
+chunks\ssr\[root-of-t
+he-server]__aa3badbd.
+_.js:1:170941)
+    at Object.aj [as 
+safeLoad] (C:\Users\l
+ucas.bevilacqua\Deskt
+op\melhorcompra\melho
+rcompra\.next\server\
+chunks\ssr\[root-of-t
+he-server]__aa3badbd.
+_.js:1:171202)
+    at b.exports (C:\
+Users\lucas.bevilacqu
+a\Desktop\melhorcompr
+a\melhorcompra\.next\
+server\chunks\ssr\[ro
+ot-of-the-server]__aa
+3badbd._.js:1:184002)
+    at n (C:\Users\lu
+cas.bevilacqua\Deskto
+p\melhorcompra\melhor
+compra\.next\server\c
+hunks\ssr\[root-of-th
+e-server]__aa3badbd._
+.js:1:184825)
+    at m (C:\Users\lu
+cas.bevilacqua\Deskto
+p\melhorcompra\melhor
+compra\.next\server\c
+hunks\ssr\[root-of-th
+e-server]__aa3badbd._
+.js:1:184350)
+    at <unknown> (C:\
+Users\lucas.bevilacqu
+a\Desktop\melhorcompr
+a\melhorcompra\.next\
+server\chunks\ssr\[ro
+ot-of-the-server]__aa
+3badbd._.js:2:1280) {
+  reason: 'end of 
+the stream or a 
+document separator 
+is expected',
+  mark: [e],
+  digest: 
+'2673629945',
+  constructor: 
+[Function: d],
+  toString: 
+[Function 
+(anonymous)]
+}
+Export encountered 
+an error on /page: 
+/, exiting the build.
+ Ô¿» Next.js build 
+worker exited with 
+code: 1 and signal: 
+null

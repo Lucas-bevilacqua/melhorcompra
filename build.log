@@ -1,0 +1,84 @@
+﻿
+> melhorcompra@0.1.0 build
+> next build
+
+node.exe :  ÔÜá 
+`eslint` 
+configuration in 
+next.config.ts is no 
+longer supported. 
+See more info here: h
+ttps://nextjs.org/doc
+s/app/api-reference/c
+li/next#next-lint-opt
+ions
+No C:\Program Files\n
+odejs\npm.ps1:29 
+caractere:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ( ÔÜá `e   
+ slint` c...xt-li    
+nt-options:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+ ÔÜá Invalid 
+next.config.ts 
+options detected: 
+ ÔÜá     
+Unrecognized key(s) 
+in object: 'eslint'
+ ÔÜá See more info 
+here: https://nextjs.
+org/docs/messages/inv
+alid-next-config
+   Ôû▓ Next.js 16.0.4 (Turbopack)
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 3.4s
+   Skipping validation of types
+   Collecting page data using 11 workers ...
+   Generating static pages using 11 workers (0/5) ...
+   Generating static pages using 11 workers (1/5) 
+   Generating static pages using 11 workers (2/5) 
+   Generating static pages using 11 workers (3/5) 
+ Ô£ô Generating static pages using 11 workers (5/5) in 1108.4ms
+   Finalizing page optimization ...
+
+Route (app)
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôöö ÔùÅ /[slug]
+  Ôöö /melhor-notebook-2025
+
+
+Ôùï  (Static)  prerendered as static content
+ÔùÅ  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+> melhorcompra@0.1.0 postbuild
+> next-sitemap
+
+Ô£¿ [next-sitemap] Loading next-sitemap config: file:///C:/Users/lucas.bevilacqua/Desktop/melhorcompra/melhorcompra/next-sitemap.config.js
+Ô£à [next-sitemap] Generation completed
+ÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔö¼ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ
+Ôöé (index)       Ôöé Values Ôöé
+Ôö£ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔö╝ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöñ
+Ôöé indexSitemaps Ôöé 0      Ôöé
+Ôöé sitemaps      Ôöé 1      Ôöé
+ÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔö┤ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ
+-----------------------------------------------------
+ SITEMAPS 
+-----------------------------------------------------
+
+   Ôùï https://melhorcompra.com.br/sitemap.xml
+
+

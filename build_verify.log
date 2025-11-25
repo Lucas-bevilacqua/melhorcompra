@@ -1,0 +1,765 @@
+﻿
+> melhorcompra@0.1.0 build
+> next build
+
+node.exe :  ÔÜá 
+`eslint` 
+configuration in 
+next.config.ts is no 
+longer supported. 
+See more info here: h
+ttps://nextjs.org/doc
+s/app/api-reference/c
+li/next#next-lint-opt
+ions
+No C:\Program Files\n
+odejs\npm.ps1:29 
+caractere:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ( ÔÜá `e   
+ slint` c...xt-li    
+nt-options:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+ ÔÜá Invalid 
+next.config.ts 
+options detected: 
+ ÔÜá     
+Unrecognized key(s) 
+in object: 'eslint'
+ ÔÜá See more info 
+here: https://nextjs.
+org/docs/messages/inv
+alid-next-config
+   Ôû▓ Next.js 16.0.4 (Turbopack)
+
+   Creating an optimized production build ...
+
+-----
+[1m[31mFATAL[39m[
+0m: An unexpected 
+Turbopack error 
+occurred. A panic 
+log has been written 
+to C:\Users\LUCAS~1.B
+EV\AppData\Local\Temp
+\next-panic-33496c76b
+dae0ee2743145a80f8424
+83.log.
+
+To help make 
+Turbopack better, 
+report this error by 
+]8;;https://github.c
+om/vercel/next.js/dis
+cussions/new?category
+=turbopack-error-repo
+rt&title=Turbopack%20
+Error%3A%20%20%20%1B%
+5B31mx%1B%5B0m%20Expe
+cted%20%27%7B%27%2C%2
+0got%20%27%3B%27&body
+=Turbopack%20version%
+3A%20%60296923e0%60%0
+ANext.js%20version%3A
+%20%600.0.0%60%0A%0AE
+rror%20message%3A%0A%
+60%60%60%0A%20%20%1B%
+5B31mx%1B%5B0m%20Expe
+cted%20%27%7B%27%2C%2
+0got%20%27%3B%27%0A%0
+ACaused%20by%3A%0A-%2
+0failed%20to%20parse%
+20source%20code%0A%0A
+Debug%20info%3A%0A-%2
+0Execution%20of%20get
+_all_written_entrypoi
+nts_with_issues_opera
+tion%20failed%0A-%20E
+xecution%20of%20Entry
+pointsOperation%3A%3A
+new%20failed%0A-%20Ex
+ecution%20of%20all_en
+trypoints_write_to_di
+sk_operation%20failed
+%0A-%20Execution%20of
+%20Project%3A%3Aemit_
+all_output_assets%20f
+ailed%0A-%20Execution
+%20of%20emit_assets%2
+0failed%0A-%20Executi
+on%20of%20emit%20fail
+ed%0A-%20Execution%20
+of%20%3CSourceMapAsse
+t%20as%20Asset%3E%3A%
+3Acontent%20failed%0A
+-%20Execution%20of%20
+%3CEcmascriptBuildNod
+eChunkContent%20as%20
+GenerateSourceMap%3E%
+3A%3Agenerate_source_
+map%20failed%0A-%20Ex
+ecution%20of%20%2A%3C
+Code%20as%20GenerateS
+ourceMap%3E%3A%3Agene
+rate_source_map%20fai
+led%0A-%20Execution%2
+0of%20EcmascriptBuild
+NodeChunkContent%3A%3
+Acode%20failed%0A-%20
+%20%20%1B%5B31mx%1B%5
+B0m%20Expected%20%27%
+7B%27%2C%20got%20%27%
+3B%27%0A%20%20%20%20%
+20%20%20%2C-%5B111%3A
+1%5D%0A%20%20%20%1B%5
+B2m108%1B%5B0m%20%7C%
+20review.mainImage%0A
+%20%20%20%1B%5B2m109%
+1B%5B0m%20%7C%20%5D%2
+0%3A%20%5B%5D%0A%20%2
+0%20%1B%5B2m110%1B%5B
+0m%20%7C%20%7D%2C%0A%
+20%20%20%1B%5B2m111%1
+B%5B0m%20%7C%20notFou
+nd%20%28%29%3B%0A%20%
+20%20%20%20%20%20%3A%
+20%1B%5B35%3B1m%20%20
+%20%20%20%20%20%20%20
+%20%20%5E%1B%5B0m%0A%
+20%20%20%1B%5B2m112%1
+B%5B0m%20%7C%20%7D%3B
+%0A%20%20%20%1B%5B2m1
+13%1B%5B0m%20%7C%20%2
+F%2FTURBOPACK%20unrea
+chable%0A%20%20%20%1B
+%5B2m114%1B%5B0m%20%7
+C%20%3B%0A%20%20%20%2
+0%20%20%20%60----%0A-
+%20failed%20to%20pars
+e%20source%20code%0A%
+20%20module.exports%2
+0%3D%20%5B%0A%20%2093
+695%2C%20%28%28__turb
+opack_context__%2C%20
+module%2C%20exports%2
+9%20%3D%3E%20%7B%0A%2
+0%20%0A%20%20const%20
+mod%20%3D%20__turbopa
+ck_context__.x%28%22n
+ext%2Fdist%2Fshared%2
+Flib%2Fno-fallback-er
+ror.external.js%22%2C
+%20%28%29%20%3D%3E%20
+require%28%22next%2Fd
+ist%2Fshared%2Flib%2F
+no-fallback-error.ext
+ernal.js%22%29%29%3B%
+0A%20%20%0A%20%20modu
+le.exports%20%3D%20mo
+d%3B%0A%20%20%7D%29%2
+C%0A%20%2050645%2C%20
+%28%28__turbopack_con
+text__%29%20%3D%3E%20
+%7B%0A%20%20%0A%20%20
+__turbopack_context__
+.n%28__turbopack_cont
+ext__.i%2827572%29%29
+%3B%0A%20%20%7D%29%2C
+%0A%20%2043619%2C%20%
+28%28__turbopack_cont
+ext__%29%20%3D%3E%20%
+7B%0A%20%20%0A%20%20_
+_turbopack_context__.
+n%28__turbopack_conte
+xt__.i%2879962%29%29%
+3B%0A%20%20%7D%29%2C%
+0A%20%2013718%2C%20%2
+8%28__turbopack_conte
+xt__%29%20%3D%3E%20%7
+B%0A%20%20%0A%20%20__
+turbopack_context__.n
+%28__turbopack_contex
+t__.i%2885523%29%29%3
+B%0A%20%20%7D%29%2C%0
+A%20%2018198%2C%20%28
+%28__turbopack_contex
+t__%29%20%3D%3E%20%7B
+%0A%20%20%0A%20%20__t
+urbopack_context__.n%
+28__turbopack_context
+__.i%2845518%29%29%3B
+%0A%20%20%7D%29%2C%0A
+%20%2062212%2C%20%28%
+28__turbopack_context
+__%29%20%3D%3E%20%7B%
+0A%20%20%0A%20%20__tu
+rbopack_context__.n%2
+8__turbopack_context_
+_.i%2866114%29%29%3B%
+0A%20%20%7D%29%2C%0A%
+20%2067611%2C%20%28%2
+8__turbopack_context_
+_%29%20%3D%3E%20%7B%0
+A%20%20%22use%20stric
+t%22%3B%0A%20%20%0A%2
+0%20return%20__turbop
+ack_context__.a%28asy
+nc%20%28__turbopack_h
+andle_async_dependenc
+ies__%2C%20__turbopac
+k_async_result__%29%2
+0%3D%3E%20%7B%20try%2
+0%7B%0A%20%20%0A%20%2
+0const%20mod%20%3D%20
+await%20__turbopack_c
+ontext__.y%28%22next-
+mdx-remote%2Frsc%22%2
+9%3B%0A%20%20%0A%20%2
+0__turbopack_context_
+_.n%28mod%29%3B%0A%20
+%20__turbopack_async_
+result__%28%29%3B%0A%
+20%20%7D%20catch%28e%
+29%20%7B%20__turbopac
+k_async_result__%28e%
+29%3B%20%7D%20%7D%2C%
+20true%29%3B%7D%29%2C
+%0A%20%201195%2C%20%2
+8%28__turbopack_conte
+xt__%29%20%3D%3E%20%7
+B%0A%20%20%22use%20st
+rict%22%3B%0A%20%20%0
+A%20%20return%20__tur
+bopack_context__.a%28
+async%20%28__turbopac
+k_handle_async_depend
+encies__%2C%20__turbo
+pack_async_result__%2
+9%20%3D%3E%20%7B%20tr
+y%20%7B%0A%20%20%0A%2
+0%20var%20__TURBOPACK
+__imported__module__7
+997__%20%3D%20__turbo
+pack_context__.i%2879
+97%29%3B%0A%20%20var%
+20__TURBOPACK__import
+ed__module__67611__%2
+0%3D%20__turbopack_co
+ntext__.i%2867611%29%
+3B%0A%20%20var%20__TU
+RBOPACK__imported__mo
+dule__72177__%20%3D%2
+0__turbopack_context_
+_.i%2872177%29%3B%0A%
+20%20var%20__TURBOPAC
+K__imported__module__
+78147__%20%3D%20__tur
+bopack_context__.i%28
+78147%29%3B%0A%20%20v
+ar%20__TURBOPACK__imp
+orted__module__1514__
+%20%3D%20__turbopack_
+context__.i%281514%29
+%3B%0A%20%20var%20__T
+URBOPACK__imported__m
+odule__19637__%20%3D%
+20__turbopack_context
+__.i%2819637%29%3B%0A
+%20%20var%20__TURBOPA
+CK__imported__module_
+_66343__%20%3D%20__tu
+rbopack_context__.i%2
+866343%29%3B%0A%20%20
+var%20__TURBOPACK__im
+ported__module__35330
+__%20%3D%20__turbopac
+k_context__.i%2835330
+%29%3B%0A%20%20var%20
+__TURBOPACK__imported
+__module__39138__%20%
+3D%20__turbopack_cont
+ext__.i%2839138%29%3B
+%0A%20%20var%20__TURB
+OPACK__imported__modu
+le__95936__%20%3D%20_
+_turbopack_context__.
+i%2895936%29%3B%0A%20
+%20var%20__turbopack_
+async_dependencies__%
+20%3D%20__turbopack_h
+andle_async_dependenc
+ies__%28%5B%0A%20%20_
+_TURBOPACK__imported_
+_module__67611__%0A%2
+0%20%5D%29%3B%0A%20%2
+0%5B__TURBOPACK__impo
+rted__module__67611__
+%5D%20%3D%20__turbopa
+ck_async_dependencies
+__.then%20%3F%20%28aw
+ait%20__turbopack_asy
+nc_dependencies__%29%
+28%29%20%3A%20__turbo
+pack_async_dependenci
+es__%3B%0A%20%20%3B%0
+A%20%20%3B%0A%20%20%3
+B%0A%20%20%3B%0A%20%2
+0%3B%0A%20%20%3B%0A%2
+0%20%3B%0A%20%20%3B%0
+A%20%20%3B%0A%20%20%3
+B%0A%20%20%3B%0A%20%2
+0async%20function%20g
+enerateStaticParams%2
+8%29%20%7B%0A%20%20co
+nst%20slugs%20%3D%20%
+280%2C%20__TURBOPACK_
+_imported__module__72
+177__%5B%22getAllSlug
+s%22%5D%29%28%29%3B%0
+A%20%20return%20slugs
+.map%28%28slug%29%3D%
+3E%28%7B%0A%20%20slug
+%0A%20%20%7D%29%29%3B
+%0A%20%20%7D%0A%20%20
+async%20function%20ge
+nerateMetadata%28%7B%
+20params%20%7D%29%20%
+7B%0A%20%20const%20re
+view%20%3D%20%280%2C%
+20__TURBOPACK__import
+ed__module__72177__%5
+B%22getReviewBySlug%2
+2%5D%29%28params.slug
+%29%3B%0A%20%20if%20%
+28%21review%29%20%7B%
+0A%20%20return%20%7B%
+0A%20%20title%3A%20%2
+2Review%20n%C3%A3o%20
+encontrado%22%0A%20%2
+0%7D%3B%0A%20%20%7D%0
+A%20%20return%20%7B%0
+A%20%20title%3A%20rev
+iew.metaTitle%20%7C%7
+C%20review.title%2C%0
+A%20%20description%3A
+%20review.metaDescrip
+tion%20%7C%7C%20revie
+w.excerpt%2C%0A%20%20
+keywords%3A%20review.
+keywords%2C%0A%20%20a
+uthors%3A%20%5B%0A%20
+%20%7B%0A%20%20name%3
+A%20review.author%20%
+7C%7C%20%22Equipe%20M
+elhorCompra%22%0A%20%
+20%7D%0A%20%20%5D%2C%
+0A%20%20openGraph%3A%
+20%7B%0A%20%20title%3
+A%20review.metaTitle%
+20%7C%7C%20review.tit
+le%2C%0A%20%20descrip
+tion%3A%20review.meta
+Description%20%7C%7C%
+20review.excerpt%2C%0
+A%20%20type%3A%20%22a
+rticle%22%2C%0A%20%20
+publishedTime%3A%20re
+view.publishedAt%2C%0
+A%20%20modifiedTime%3
+A%20review.updatedAt%
+2C%0A%20%20authors%3A
+%20%5B%0A%20%20review
+.author%20%7C%7C%20%2
+2Equipe%20MelhorCompr
+a%22%0A%20%20%5D%2C%0
+A%20%20images%3A%20re
+view.mainImage%20%3F%
+20%5B%0A%20%20review.
+mainImage%0A%20%20%5D
+%20%3A%20%5B%5D%0A%20
+%20%7D%2C%0A%20%20twi
+tter%3A%20%7B%0A%20%2
+0card%3A%20%22summary
+_large_image%22%2C%0A
+%20%20title%3A%20revi
+ew.metaTitle%20%7C%7C
+%20review.title%2C%0A
+%20%20description%3A%
+20review.metaDescript
+ion%20%7C%7C%20review
+.excerpt%2C%0A%20%20i
+mages%3A%20review.mai
+nImage%20%3F%20%5B%0A
+%20%20review.mainImag
+e%0A%20%20%5D%20%3A%2
+0%5B%5D%0A%20%20%7D%2
+C%0A%20%20notFound%20
+%28%29%3B%0A%20%20%7D
+%3B%0A%20%20%2F%2FTUR
+BOPACK%20unreachable%
+0A%20%20%3B%0A%20%20c
+onst%20relatedReviews
+%20%3D%20undefined%3B
+%0A%20%20%7D%0A%20%20
+__turbopack_context__
+.s%28%5B%0A%20%20%22g
+enerateMetadata%22%2C
+%0A%20%20%28%29%3D%3E
+generateMetadata%2C%0
+A%20%20%22generateSta
+ticParams%22%2C%0A%20
+%20%28%29%3D%3Egenera
+teStaticParams%0A%20%
+20%5D%29%3B%0A%20%20_
+_turbopack_async_resu
+lt__%28%29%3B%0A%20%2
+0%7D%20catch%28e%29%2
+0%7B%20__turbopack_as
+ync_result__%28e%29%3
+B%20%7D%20%7D%2C%20fa
+lse%29%3B%7D%29%2C%0A
+%20%20%5D%3B%0A%60%60
+%60&labels=Turbopack,
+Turbopack%20Panic%20B
+acktrace\clicking 
+here.]8;;\
+-----
+
+
+> Build error 
+occurred
+Error [TurbopackInter
+nalError]:   
+[31mx[0m Expected 
+'{', got ';'
+
+Caused by:
+- failed to parse 
+source code
+
+Debug info:
+- Execution of get_al
+l_written_entrypoints
+_with_issues_operatio
+n failed
+- Execution of Entryp
+ointsOperation::new 
+failed
+- Execution of all_en
+trypoints_write_to_di
+sk_operation failed
+- Execution of Projec
+t::emit_all_output_as
+sets failed
+- Execution of 
+emit_assets failed
+- Execution of emit 
+failed
+- Execution of 
+<SourceMapAsset as 
+Asset>::content 
+failed
+- Execution of <Ecmas
+criptBuildNodeChunkCo
+ntent as GenerateSour
+ceMap>::generate_sour
+ce_map failed
+- Execution of 
+*<Code as GenerateSou
+rceMap>::generate_sou
+rce_map failed
+- Execution of Ecmasc
+riptBuildNodeChunkCon
+tent::code failed
+-   [31mx[0m 
+Expected '{', got ';'
+       ,-[111:1]
+   [2m108[0m | 
+review.mainImage
+   [2m109[0m | ] : 
+[]
+   [2m110[0m | },
+   [2m111[0m | 
+notFound ();
+       : [35;1m     
+      ^[0m
+   [2m112[0m | };
+   [2m113[0m | 
+//TURBOPACK 
+unreachable
+   [2m114[0m | ;
+       `----
+- failed to parse 
+source code
+  module.exports = [
+  93695, ((__turbopac
+k_context__, module, 
+exports) => {
+  
+  const mod = __turbo
+pack_context__.x("nex
+t/dist/shared/lib/no-
+fallback-error.extern
+al.js", () => require
+("next/dist/shared/li
+b/no-fallback-error.e
+xternal.js"));
+  
+  module.exports = 
+mod;
+  }),
+  50645, ((__turbopac
+k_context__) => {
+  
+  __turbopack_context
+__.n(__turbopack_cont
+ext__.i(27572));
+  }),
+  43619, ((__turbopac
+k_context__) => {
+  
+  __turbopack_context
+__.n(__turbopack_cont
+ext__.i(79962));
+  }),
+  13718, ((__turbopac
+k_context__) => {
+  
+  __turbopack_context
+__.n(__turbopack_cont
+ext__.i(85523));
+  }),
+  18198, ((__turbopac
+k_context__) => {
+  
+  __turbopack_context
+__.n(__turbopack_cont
+ext__.i(45518));
+  }),
+  62212, ((__turbopac
+k_context__) => {
+  
+  __turbopack_context
+__.n(__turbopack_cont
+ext__.i(66114));
+  }),
+  67611, ((__turbopac
+k_context__) => {
+  "use strict";
+  
+  return __turbopack_
+context__.a(async (__
+turbopack_handle_asyn
+c_dependencies__, __t
+urbopack_async_result
+__) => { try {
+  
+  const mod = await _
+_turbopack_context__.
+y("next-mdx-remote/rs
+c");
+  
+  __turbopack_context
+__.n(mod);
+  __turbopack_async_r
+esult__();
+  } catch(e) { __turb
+opack_async_result__(
+e); } }, true);}),
+  1195, ((__turbopack
+_context__) => {
+  "use strict";
+  
+  return __turbopack_
+context__.a(async (__
+turbopack_handle_asyn
+c_dependencies__, __t
+urbopack_async_result
+__) => { try {
+  
+  var __TURBOPACK__im
+ported__module__7997_
+_ = __turbopack_conte
+xt__.i(7997);
+  var __TURBOPACK__im
+ported__module__67611
+__ = __turbopack_cont
+ext__.i(67611);
+  var __TURBOPACK__im
+ported__module__72177
+__ = __turbopack_cont
+ext__.i(72177);
+  var __TURBOPACK__im
+ported__module__78147
+__ = __turbopack_cont
+ext__.i(78147);
+  var __TURBOPACK__im
+ported__module__1514_
+_ = __turbopack_conte
+xt__.i(1514);
+  var __TURBOPACK__im
+ported__module__19637
+__ = __turbopack_cont
+ext__.i(19637);
+  var __TURBOPACK__im
+ported__module__66343
+__ = __turbopack_cont
+ext__.i(66343);
+  var __TURBOPACK__im
+ported__module__35330
+__ = __turbopack_cont
+ext__.i(35330);
+  var __TURBOPACK__im
+ported__module__39138
+__ = __turbopack_cont
+ext__.i(39138);
+  var __TURBOPACK__im
+ported__module__95936
+__ = __turbopack_cont
+ext__.i(95936);
+  var __turbopack_asy
+nc_dependencies__ = _
+_turbopack_handle_asy
+nc_dependencies__([
+  __TURBOPACK__import
+ed__module__67611__
+  ]);
+  [__TURBOPACK__impor
+ted__module__67611__]
+ = __turbopack_async_
+dependencies__.then 
+? (await __turbopack_
+async_dependencies__)
+() : __turbopack_asyn
+c_dependencies__;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  async function gene
+rateStaticParams() {
+  const slugs = (0, _
+_TURBOPACK__imported_
+_module__72177__["get
+AllSlugs"])();
+  return 
+slugs.map((slug)=>({
+  slug
+  }));
+  }
+  async function 
+generateMetadata({ 
+params }) {
+  const review = (0, 
+__TURBOPACK__imported
+__module__72177__["ge
+tReviewBySlug"])(para
+ms.slug);
+  if (!review) {
+  return {
+  title: "Review 
+n├úo encontrado"
+  };
+  }
+  return {
+  title: 
+review.metaTitle || 
+review.title,
+  description: review
+.metaDescription || 
+review.excerpt,
+  keywords: 
+review.keywords,
+  authors: [
+  {
+  name: 
+review.author || 
+"Equipe MelhorCompra"
+  }
+  ],
+  openGraph: {
+  title: 
+review.metaTitle || 
+review.title,
+  description: review
+.metaDescription || 
+review.excerpt,
+  type: "article",
+  publishedTime: 
+review.publishedAt,
+  modifiedTime: 
+review.updatedAt,
+  authors: [
+  review.author || 
+"Equipe MelhorCompra"
+  ],
+  images: 
+review.mainImage ? [
+  review.mainImage
+  ] : []
+  },
+  twitter: {
+  card: "summary_larg
+e_image",
+  title: 
+review.metaTitle || 
+review.title,
+  description: review
+.metaDescription || 
+review.excerpt,
+  images: 
+review.mainImage ? [
+  review.mainImage
+  ] : []
+  },
+  notFound ();
+  };
+  //TURBOPACK 
+unreachable
+  ;
+  const 
+relatedReviews = 
+undefined;
+  }
+  __turbopack_context
+__.s([
+  "generateMetadata",
+  
+()=>generateMetadata,
+  "generateStaticPara
+ms",
+  ()=>generateStaticP
+arams
+  ]);
+  __turbopack_async_r
+esult__();
+  } catch(e) { __turb
+opack_async_result__(
+e); } }, false);}),
+  ];
+    at <unknown> (Tur
+bopackInternalError: 
+  [31mx[0m 
+Expected '{', got 
+';') {
+  type: 'TurbopackInt
+ernalError',
+  location: undefined
+}
