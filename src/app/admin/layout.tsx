@@ -1,6 +1,27 @@
+import { auth } from "@/lib/auth";
+import Link from "next/link";
+import { LayoutDashboard, FileText, Package, LogOut } from "lucide-react";
+
+export default async function AdminLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    const session = await auth();
+
+    // Middleware handles redirect, just check for rendering
+    if (!session || session.user.role !== "admin") {
+        return null;
+    }
+
+    return (
+        <div className="flex h-screen bg-neutral-50">
+            {/* Sidebar */}
+            <aside className="w-64 bg-white shadow-md">
+                <div className="p-6">
                     <h1 className="text-2xl font-bold text-primary-600">Admin</h1>
                     <p className="text-sm text-neutral-600">MelhorCompra</p>
-                </div >
+                </div>
 
                 <nav className="mt-6">
                     <Link
@@ -42,10 +63,10 @@
                         </form>
                     </div>
                 </div>
-            </aside >
+            </aside>
 
-    {/* Main Content */ }
-    < main className = "flex-1 overflow-y-auto p-8" > { children }</main >
-        </div >
+            {/* Main Content */}
+            <main className="flex-1 overflow-y-auto p-8">{children}</main>
+        </div>
     );
 }
